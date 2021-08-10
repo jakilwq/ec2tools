@@ -1,10 +1,12 @@
-package main
+package ec2tools
 
-import (
-	"fmt"
-	"os"
-)
+import "os"
 
-func main() {
-	fmt.Println(os.Hostname())
+func GetHostName() string {
+	host, _ := os.Hostname()
+	return host
+}
+
+func GetEnv() []string {
+	return os.Environ()
 }
